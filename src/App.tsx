@@ -2,8 +2,21 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component<any, any> {
-  render() {
+import {omit} from 'ramda';
+
+interface IAppProps {
+  name?: string;
+}
+
+class App extends Component<IAppProps, any> {
+  public render() {
+    const test = {
+      a: 123,
+      b: "string"
+    }
+    const result = omit(["b"], test);
+    console.log(result);
+
     return (
       <div className="App">
         <header className="App-header">

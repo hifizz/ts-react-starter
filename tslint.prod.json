@@ -3,18 +3,18 @@
   "linterOptions": {
     "exclude": [
       "config/**/*.js",
-      "node_modules/**/*.ts"
+      "node_modules/**/*.ts",
+      "mock/**/*.js",
+      "src/**/*.js",
+      "dll/**/*.js",
+      "package/**/*.js"
     ]
   },
   "rules": {
     "ordered-imports": false,
-    "no-console": false,
-    "no-debugger": false,
     "no-empty": false,
     "object-literal-sort-keys": false,
     "no-shadowed-variable": false,
-    "variable-name": false,
-    "jsx-no-lambda": false,
     "no-namespace": false
   }
 }

@@ -69,6 +69,8 @@ const resolveModule = (resolveFn, filePath) => {
 module.exports = {
   dotenv: resolveApp('.env'),
   appPath: resolveApp('.'),
+  appTsLint: resolveApp('./tslint.json'),
+  appProdTsLint: resolveApp('./tslint.prod.json'),
   appBuild: resolveApp('build'),
   appPublic: resolveApp('public'),
   appHtml: resolveApp('public/index.html'),
