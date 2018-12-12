@@ -503,10 +503,10 @@ module.exports = {
         typescript: resolve.sync('typescript', {
           basedir: paths.appNodeModules,
         }),
+        tslint: paths.appTsProdLint,
         async: false,
         checkSyntacticErrors: true,
-        tsconfig: paths.appTsConfig,
-        tslint: paths.appProdTsConfig,
+        tsconfig: paths.appTsConfig,      
         reportFiles: [
           '**',
           '!**/*.json',
