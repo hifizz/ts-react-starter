@@ -21,7 +21,6 @@ const getClientEnvironment = require('./env');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin-alt');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // It requires a trailing slash, or the file assets will get an incorrect path.
@@ -425,9 +424,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new BundleAnalyzerPlugin({
-      analyzerPort: 8100
-    }),
     // Generates an `index.html` file with the <script> injected.
     new HtmlWebpackPlugin({
       inject: true,
@@ -503,10 +499,10 @@ module.exports = {
         typescript: resolve.sync('typescript', {
           basedir: paths.appNodeModules,
         }),
-        tslint: paths.appTsProdLint,
+        tslint: paths.appTsLintProdConfig,
         async: false,
         checkSyntacticErrors: true,
-        tsconfig: paths.appTsConfig,      
+        tsconfig: paths.appTsProdConfig,      
         reportFiles: [
           '**',
           '!**/*.json',

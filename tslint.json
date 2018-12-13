@@ -1,20 +1,7 @@
 {
-  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
-  "linterOptions": {
-    "exclude": [
-      "config/**/*.js",
-      "node_modules/**/*.ts",
-      "mock/**/*.js",
-      "src/**/*.js",
-      "dll/**/*.js",
-      "package/**/*.js"
-    ]
-  },
+  "extends": "./tslint.prod.json",
   "rules": {
-    "ordered-imports": false,
-    "object-literal-sort-keys": false,
-    "no-shadowed-variable": false,
-    "variable-name": false,
-    "no-namespace": false
+    "no-console": false,
+    "no-debugger": false
   }
 }

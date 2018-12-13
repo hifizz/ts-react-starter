@@ -17,8 +17,6 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin-alt');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
-
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
@@ -336,10 +334,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new BundleAnalyzerPlugin({
-      /** 分析页面的端口 */
-      analyzerPort: 8000
-    }),
     // Generates an `index.html` file with the <script> injected.
     new HtmlWebpackPlugin({
       inject: true,
@@ -387,7 +381,7 @@ module.exports = {
         typescript: resolve.sync('typescript', {
           basedir: paths.appNodeModules,
         }),
-        tslint: paths.appTsLint,
+        tslint: paths.appTsLintConfig,
         async: false,
         checkSyntacticErrors: true,
         tsconfig: paths.appTsConfig,
