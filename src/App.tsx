@@ -2,8 +2,40 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component<any, any> {
-  render() {
+interface IAppProps {
+  name?: string;
+}
+
+interface IAppState {
+  count: number;
+}
+
+class App extends Component<IAppProps, IAppState> {
+  public defaultProps = {
+    name: "fizz"
+  }
+
+  constructor(props: IAppProps) {
+    super(props)
+    this.state = {
+      count: 0
+    }
+  }
+
+  public onIncrease = () => {
+    this.setState({
+      count: this.state.count + 1
+    })
+  }
+
+  public onDecrease = () => {
+    this.setState({
+      count: this.state.count - 1
+    })
+  }
+
+  public render() {
+    const { count } = this.state;
     return (
       <div className="App">
         <header className="App-header">
@@ -19,6 +51,11 @@ class App extends Component<any, any> {
           >
             Learn React
           </a>
+          <div className="App-count-app">
+            <span>Current count: {count}</span>
+            <button onClick={this.onIncrease}>Increase</button>
+            <button onClick={this.onDecrease}>Decrease</button>
+          </div>
         </header>
       </div>
     );

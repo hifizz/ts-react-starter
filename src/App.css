@@ -30,3 +30,13 @@
     transform: rotate(360deg);
   }
 }
+
+.App-count-app {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.App-count-app>button {
+  margin: 5px;
+}
