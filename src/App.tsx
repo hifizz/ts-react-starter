@@ -12,7 +12,7 @@ interface IAppState {
 }
 
 class App extends Component<IAppProps, IAppState> {
-  public defaultProps = {
+  public static defaultProps = {
     name: "fizz"
   }
 
