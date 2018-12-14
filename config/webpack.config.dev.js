@@ -42,8 +42,10 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
   const loaders = [
     require.resolve('style-loader'),
     {
-      loader: require.resolve('css-loader'),
-      options: cssOptions,
+      loader: cssOptions.modules 
+        ? require.resolve('typings-for-css-modules-loader')
+        : require.resolve('css-loader'),
+      options: cssOptions
     },
     {
       // Options for PostCSS as we reference these options twice
@@ -217,7 +219,6 @@ module.exports = {
               customize: require.resolve(
                 'babel-preset-react-app/webpack-overrides'
               ),
-
               plugins: [
                 [
                   require.resolve('babel-plugin-named-asset-import'),
@@ -285,6 +286,8 @@ module.exports = {
             use: getStyleLoaders({
               importLoaders: 1,
               modules: true,
+              namedExport: true,
+              camelCase: true,
               getLocalIdent: getCSSModuleLocalIdent,
             }),
           },
@@ -306,6 +309,8 @@ module.exports = {
               {
                 importLoaders: 2,
                 modules: true,
+                namedExport: true,
+                camelCase: true,
                 getLocalIdent: getCSSModuleLocalIdent,
               },
               'sass-loader'

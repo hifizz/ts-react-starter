@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import * as style from './index.module.css';
 
 interface IAppProps {
   name?: string;
@@ -53,7 +54,7 @@ class App extends Component<IAppProps, IAppState> {
           </a>
           <div className="App-count-app">
             <span>Current count: {count}</span>
-            <button onClick={this.onIncrease}>Increase</button>
+            <button onClick={this.onIncrease} className={style.increase}>Increase</button>
             <button onClick={this.onDecrease}>Decrease</button>
           </div>
         </header>

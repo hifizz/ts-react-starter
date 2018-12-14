@@ -66,8 +66,10 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
       ),
     },
     {
-      loader: require.resolve('css-loader'),
-      options: cssOptions,
+      loader: cssOptions.modules ?
+        require.resolve('typings-for-css-modules-loader') :
+        require.resolve('css-loader'),
+      options: cssOptions
     },
     {
       // Options for PostCSS as we reference these options twice
@@ -364,6 +366,8 @@ module.exports = {
               importLoaders: 1,
               sourceMap: shouldUseSourceMap,
               modules: true,
+              namedExport: true,
+              camelCase: true,
               getLocalIdent: getCSSModuleLocalIdent,
             }),
           },
@@ -397,6 +401,8 @@ module.exports = {
                 importLoaders: 2,
                 sourceMap: shouldUseSourceMap,
                 modules: true,
+                namedExport: true,
+                camelCase: true,
                 getLocalIdent: getCSSModuleLocalIdent,
               },
               'sass-loader'
