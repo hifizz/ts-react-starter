@@ -121,7 +121,12 @@
       "web.jsx",
       "jsx",
       "node"
-    ]
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.test.json"
+      }
+    }
   },
   "babel": {
     "presets": [
