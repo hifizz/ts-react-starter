@@ -1044,6 +1044,10 @@ acorn@^6.0.1, acorn@^6.0.2:
   version "6.0.4"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.0.4.tgz#77377e7353b72ec5104550aa2d2097a2fd40b754"
 
+add-stream@^1.0.0:
+  version "1.0.0"
+  resolved "http://registry.npm.taobao.org/add-stream/download/add-stream-1.0.0.tgz#6a7990437ca736d5e1288db92bd3266d5f5cb2aa"
+
 address@1.0.3, address@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/address/-/address-1.0.3.tgz#b5f50631f8d6cec8bd20c963963afb55e06cbce9"
@@ -2227,6 +2231,16 @@ conventional-changelog-atom@^2.0.1:
   resolved "http://registry.npm.taobao.org/conventional-changelog-atom/download/conventional-changelog-atom-2.0.1.tgz#dc88ce650ffa9ceace805cbe70f88bfd0cb2c13a"
   dependencies:
     q "^1.5.1"
+
+conventional-changelog-cli@^2.0.11:
+  version "2.0.11"
+  resolved "http://registry.npm.taobao.org/conventional-changelog-cli/download/conventional-changelog-cli-2.0.11.tgz#18210bfcd61660140e3160e6d00d68abe260e493"
+  dependencies:
+    add-stream "^1.0.0"
+    conventional-changelog "^3.0.5"
+    lodash "^4.2.1"
+    meow "^4.0.0"
+    tempfile "^1.1.1"
 
 conventional-changelog-codemirror@^2.0.1:
   version "2.0.1"
@@ -8521,6 +8535,13 @@ tar@^4:
     safe-buffer "^5.1.2"
     yallist "^3.0.2"
 
+tempfile@^1.1.1:
+  version "1.1.1"
+  resolved "http://registry.npm.taobao.org/tempfile/download/tempfile-1.1.1.tgz#5bcc4eaecc4ab2c707d8bc11d99ccc9a2cb287f2"
+  dependencies:
+    os-tmpdir "^1.0.0"
+    uuid "^2.0.1"
+
 terser-webpack-plugin@1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/terser-webpack-plugin/-/terser-webpack-plugin-1.1.0.tgz#cf7c25a1eee25bf121f4a587bb9e004e3f80e528"
@@ -8927,6 +8948,10 @@ utila@^0.4.0, utila@~0.4:
 utils-merge@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
+
+uuid@^2.0.1:
+  version "2.0.3"
+  resolved "http://registry.npm.taobao.org/uuid/download/uuid-2.0.3.tgz#67e2e863797215530dff318e5bf9dcebfd47b21a"
 
 uuid@^3.0.1, uuid@^3.3.2:
   version "3.3.2"
