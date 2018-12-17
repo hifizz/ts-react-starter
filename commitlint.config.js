@@ -1,3 +1,7 @@
+/**
+ * Commitlint website and documentation: https://marionebl.github.io/commitlint/#/
+ * GitHub repo: https://github.com/marionebl/commitlint
+ */
 module.exports = {
   extends: ["@commitlint/config-conventional"],
   // rules & wildcards copy from https://github.com/erikmueller/conventional-changelog-lint-config-atom/blob/master/index.js
