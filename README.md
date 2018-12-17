@@ -1,8 +1,18 @@
-# ts-react-starter
+# ts-react-starter-team
 
-A starter for starting your Typescript React app now.
+A starter for Team-Work starting your Typescript React app now.
 
 ## Features
+
+For team:
+
+- prettier
+- editorconfig
+- precommit hook
+- create changelog
+- gitlab-ci.yaml template
+
+base:
 
 - Tslint for check type.
 - CSS Module support in `.tsx`.
