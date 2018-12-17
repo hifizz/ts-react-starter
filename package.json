@@ -63,7 +63,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
@@ -83,6 +84,8 @@
   ],
   "devDependencies": {
     "@babel/plugin-syntax-jsx": "^7.2.0",
+    "@commitlint/cli": "^7.2.1",
+    "@commitlint/config-conventional": "^7.1.2",
     "@types/jest": "^23.3.10",
     "@types/node": "^10.12.12",
     "@types/ramda": "^0.25.43",
