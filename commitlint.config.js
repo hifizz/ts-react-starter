@@ -12,6 +12,7 @@ module.exports = {
         /** Merge branch */
         "merge",
         "build",
+        "chore",
         "ci",
         "docs",
         "feat",
