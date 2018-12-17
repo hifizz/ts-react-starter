@@ -6,6 +6,7 @@ module.exports = {
   extends: ["@commitlint/config-conventional"],
   // rules & wildcards copy from https://github.com/erikmueller/conventional-changelog-lint-config-atom/blob/master/index.js
   parserPreset: "conventional-changelog-atom",
+  formatter: "@commitlint/format",
   rules: {
     "type-enum": [
       2,
