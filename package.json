@@ -56,11 +56,14 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "commitmsg": "validate-commit-msg",
+    "commit": "git-cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged validate-commit-msg"
     }
   },
   "lint-staged": {
@@ -85,6 +88,8 @@
     "@types/ramda": "^0.25.43",
     "@types/react": "^16.7.13",
     "@types/react-dom": "^16.0.11",
+    "conventional-changelog": "^3.0.5",
+    "git-cz": "^1.8.0",
     "husky": "^1.2.1",
     "lint-staged": "^8.1.0",
     "ramda": "^0.26.1",
@@ -93,6 +98,7 @@
     "tslint-react": "^3.6.0",
     "typescript": "^3.2.1",
     "typings-for-css-modules-loader": "^1.7.0",
+    "validate-commit-msg": "^2.14.0",
     "webpack-bundle-analyzer": "^3.0.3"
   },
   "jest": {
