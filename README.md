@@ -1,3 +1,43 @@
+# ts-react-starter-team
+
+A starter for Team-Work starting your Typescript React app now.
+
+## Features
+
+For team:
+
+- prettier
+- editorconfig
+- precommit hook
+- create changelog
+- gitlab-ci.yaml template
+
+base:
+
+- Tslint for check type.
+- CSS Module support in `.tsx`.
+- Using different tsconfig by environment varibale.
+
+## Install
+
+npm user:
+
+```bash
+npm i -g create-react-app
+
+create-react-app --scripts-version=https://gitlab.com/hifizz/typescript-react-starter my-app
+```
+
+yarn user:
+
+```bash
+yarn global add create-react-app
+
+create-react-app --scripts-version=https://gitlab.com/hifizz/typescript-react-starter my-app
+```
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
