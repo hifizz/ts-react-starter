@@ -20,20 +20,9 @@ base:
 
 ## Install
 
-npm user:
-
 ```bash
-npm i -g create-react-app
-
-create-react-app --scripts-version=https://gitlab.com/hifizz/typescript-react-starter my-app
-```
-
-yarn user:
-
-```bash
-yarn global add create-react-app
-
-create-react-app --scripts-version=https://gitlab.com/hifizz/typescript-react-starter my-app
+git clone https://github.com/hifizz/ts-react-starter.git awesome-app
+rm -rf ./git
 ```
 
 ---
